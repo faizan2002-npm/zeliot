@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Header } from './../../Components/Public/Header';
 import { Footer } from './../../Components/Public/Footer';
-import { Loader } from './../../Components/Loader';
+import { Loader } from './../../Components/Public/Loader';
 
 const PublicLayout = ({ children }) => {
     const [Loading, setLoading] = useState(true);
@@ -16,7 +16,7 @@ const PublicLayout = ({ children }) => {
             {
                 Loading ? <>
                     <Header />
-                    <main id="main-content">
+                    <main id="main">
                         <Loader />
                     </main>
                 </> : <>
