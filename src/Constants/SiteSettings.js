@@ -1,10 +1,10 @@
-// import images from "./images";
+import Images from "./Images";
 const SiteSettings = [
     {
         __SITE_ID: '007',
-        SITE_SLOGAN: "",
+        SITE_SLOGAN: "Enterprise Mobility Solution | Enterprise IOT Solution",
         SITE_TITLE: "Zeliot",
-        // SITE_LOGO: images.LOGO,
+        SITE_LOGO: Images.LOGO,
         Copyright_text: `@${new Date().getFullYear()} Zeliot`,
     },
 ];

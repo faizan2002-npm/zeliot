@@ -1,50 +1,50 @@
 import React from 'react'
+import { Container, Image, Nav, Navbar } from 'react-bootstrap'
+import { Link } from 'react-router-dom';
+import SiteSettings from '../../Constants/SiteSettings';
+import routes from './../../Routes/routes';
 
 export const Header = () => {
+    const getRoutes = (routes) => {
+        return routes.map((prop, key) => {
+            if (prop.layout === "") {
+                if (prop.name === 'Home') {
+                    return (
+                        <Nav.Item as="li" key={key}>
+                            <Link className="nav-link" to={prop.layout + prop.path}>{prop.name}</Link>
+                        </Nav.Item>
+                    );
+                } else {
+                    return (
+                        <Nav.Item as="li" key={key}>
+                            <Link className="nav-link" to={prop.layout + prop.path}>{prop.name}</Link>
+                        </Nav.Item>
+                    );
+                }
+            } else {
+                return null;
+            }
+        });
+    };
     return (
         <>
 
             <header id="header">
-                <nav class="navbar navbar-expand-lg navbar-dark ">
-                    <div class="container">
-                        <a class="navbar-brand" href="index.html">
-                            <img src="img/zeliot-logo.png" class="w50" alt="" />
-                        </a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse"
-                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                            aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav ml-auto">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="solutions.html">solutions</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="solutions-evs.html">solutions2</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">AquilaSchool</a>
-                                </li>
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="#">
-                                        AquilaOEM
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="accessories.html">
-                                        Accessories
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">
-                                        Contact
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
+                <Navbar as="nav" variant="dark" expand="lg">
+                    <Container>
+                        <Link className="navbar-brand" to="/">
+                            <Image src={SiteSettings.SiteSettings[0].SITE_LOGO} alt="" className="w-50" fluid />
+                        </Link>
+                        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                        <Navbar.Collapse id="basic-navbar-nav">
+                            <Nav className="mr-auto" as="ul" id="primary_main_menu">
+                                {
+                                    getRoutes(routes)
+                                }
+                            </Nav>
+                        </Navbar.Collapse>
+                    </Container>
+                </Navbar>
             </header>
         </>
     )

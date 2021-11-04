@@ -77,15 +77,13 @@ body .btn-default-2:hover {
 }
 
 #header ul li a {
-  opacity: 0.5;
-  color: rgba(229, 231, 235, var(--tw-text-opacity));
+  color: rgba(229, 231, 235, 0.5);
   font-size: 1.125rem;
 }
 
 #header ul li a:hover {
-  -webkit-transition: 0.5s all;
-  transition: 0.5s all;
-  border-bottom: 3px solid #ff5046;
+  color: #e5e7eb;
+  opacity: 1;
 }
 
 #main .Meet {

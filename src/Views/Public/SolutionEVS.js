@@ -1,383 +1,236 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PublicLayout from './../../Layouts/Public/PublicLayout';
+import Images from "./../../Constants/Images";
+import MilestoneBox from './../../Components/Public/MilestoneBox';
+import LeftRightSection from './../../Components/Public/LeftRightSection';
+import { Container, Row } from 'react-bootstrap';
+import FeaturedCard from './../../Components/Public/FeaturedCard';
+import SolutionMenuCard from './../../Components/Public/SolutionMenuCard';
+import ReactPlayer from 'react-player';
 
 export const SolutionEVS = () => {
+    const [SolutionMenu, setSolutionMenu] = useState([
+        {
+            _id: 1,
+            image: Images.SolutionEVSFirstMenuImage,
+            title: 'Fleet Management Solution',
+            link:'/SolutionFMS'
+        },
+        {
+            _id: 2,
+            image: Images.SolutionEVSFirstMenuImage,
+            title: 'OEM & Enterprise Solution',
+            link:'/SolutionEVS'
+        },
+        {
+            _id: 3,
+            image: Images.SolutionEVSFirstMenuImage,
+            title: 'Electric Vehicle Solution',
+            link:'/'
+        },
+        {
+            _id: 4,
+            image: Images.SolutionEVSFirstMenuImage,
+            title: 'Urban Public Transport Solution',
+            link:'/'
+        },
+        {
+            _id: 5,
+            image: Images.SolutionEVSFirstMenuImage,
+            title: 'Logistics Solution',
+            link:'/'
+        },
+        {
+            _id: 6,
+            image: Images.SolutionEVSFirstMenuImage,
+            title: 'Employee Transport Management Solution',
+            link:'/'
+        },
+        {
+            _id: 7,
+            image: Images.SolutionEVSFirstMenuImage,
+            title: 'School Solution',
+            link:'/'
+        },
+        {
+            _id: 8,
+            image: Images.SolutionEVSFirstMenuImage,
+            title: 'Business Admin Solution',
+            link:'/'
+        },
+    ])
+    const [FirstSection, setFirstSection] = useState([{
+        _id: 1,
+        image: Images.SolutionEVSFirstImage,
+        title: '99.99% guaranteed Up-Time',
+        paragraph: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd.',
+        firstLink: '#',
+        secondLink: '#',
+    }]);
+    const [Milestone, setMilestone] = useState([
+        {
+            _id: 1,
+            title: '800 Million',
+            paragraph: 'Messages per month',
+        },
+        {
+            _id: 2,
+            title: '0.1 Billion',
+            paragraph: 'Kilometers driven per month',
+        },
+        {
+            _id: 3,
+            title: '0.1 Billion',
+            paragraph: 'Alerts generated per month',
+        },
+        {
+            _id: 4,
+            title: '100 Hours',
+            paragraph: 'Of vehicle movement tracked per month',
+        },
+        {
+            _id: 5,
+            title: '0.1 Billion',
+            paragraph: 'Alerts generated per month',
+        },
+    ])
+    const [Features, setFeatures] = useState([
+        {
+            _id: 1,
+            image: Images.SolutionEVSFeatureImage,
+            title: 'Lorem Ipsum'
+        },
+        {
+            _id: 2,
+            image: Images.SolutionEVSFeatureFirstImage,
+            title: 'Lorem Ipsum'
+        },
+        {
+            _id: 3,
+            image: Images.SolutionEVSFeatureSecondImage,
+            title: 'Lorem Ipsum'
+        },
+        {
+            _id: 4,
+            image: Images.SolutionEVSFeatureThirdImage,
+            title: 'Lorem Ipsum'
+        },
+        {
+            _id: 5,
+            image: Images.SolutionEVSFeatureFourthImage,
+            title: 'Lorem Ipsum'
+        },
+        {
+            _id: 6,
+            image: Images.SolutionEVSFeatureFifthImage,
+            title: 'Lorem Ipsum'
+        },
+        {
+            _id: 7,
+            image: Images.SolutionEVSFeatureSixthImage,
+            title: 'Lorem Ipsum'
+        },
+        {
+            _id: 8,
+            image: Images.SolutionEVSFeatureSeventhImage,
+            title: 'Lorem Ipsum'
+        },
+        {
+            _id: 9,
+            image: Images.SolutionEVSFeatureEightImage,
+            title: 'Lorem Ipsum'
+        },
+        {
+            _id: 10,
+            image: Images.SolutionEVSFeatureNinthImage,
+            title: 'Lorem Ipsum'
+        },
+        {
+            _id: 11,
+            image: Images.SolutionEVSFeatureTenthImage,
+            title: 'Lorem Ipsum'
+        },
+        {
+            _id: 12,
+            image: Images.SolutionEVSFeatureFirstImage,
+            title: 'Lorem Ipsum'
+        },
+    ])
+    const [FourthSection, setFourthSection] = useState([{
+        _id: 1,
+        image: Images.SolutionEVSSecondImage,
+        title: '99.99% guaranteed Up-Time',
+        paragraph: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd.',
+        firstLink: '#',
+        secondLink: '#',
+    }]);
+    const [FifthSection, setFifthSection] = useState([{
+        _id: 1,
+        image: Images.SolutionEVSThirdImage,
+        title: '99.99% guaranteed Up-Time',
+        paragraph: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd.',
+        firstLink: '#',
+        secondLink: '#',
+    }]);
+    const [SixthSection, setSixthSection] = useState([{
+        _id: 1,
+        image: Images.SolutionEVSFourthImage,
+        title: '99.99% guaranteed Up-Time',
+        paragraph: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd.',
+        firstLink: '#',
+        secondLink: '#',
+    }]);
     return (
         <PublicLayout>
-            <section class="navi-menu">
-                <a href="#">
-                    <div class="navi-link-inner">
-                        <div class="">
-                            <img src="img/bus.png" class="img-fluid" alt="" />
-                        </div>
-                        <div class="navi-text">Fleet Management Solution</div>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="navi-link-inner">
-                        <div class="">
-                            <img src="img/bus.png" class="img-fluid" alt="" />
-                        </div>
-                        <div class="navi-text">OEM &amp; Enterprise Solution</div>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="navi-link-inner">
-                        <div class="">
-                            <img src="img/bus.png" class="img-fluid" alt="" />
-                        </div>
-                        <div class="navi-text">Electric Vehicle Solution</div>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="navi-link-inner">
-                        <div class="">
-                            <img src="img/bus.png" class="img-fluid" alt="" />
-                        </div>
-                        <div class="navi-text">Urban Public Transport Solution</div>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="navi-link-inner">
-                        <div class="">
-                            <img src="img/bus.png" class="img-fluid" alt="" />
-                        </div>
-                        <div class="navi-text">Logistics Solution</div>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="navi-link-inner">
-                        <div class="">
-                            <img src="img/bus.png" class="img-fluid" alt="" />
-                        </div>
-                        <div class="navi-text">Employee Transport Management Solution</div>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="navi-link-inner">
-                        <div class="">
-                            <img src="img/bus.png" class="img-fluid" alt="" />
-                        </div>
-                        <div class="navi-text">School Solution</div>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="navi-link-inner">
-                        <div class="">
-                            <img src="img/bus.png" class="img-fluid" alt="" />
-                        </div>
-                        <div class="navi-text">Business Admin Solution</div>
-                    </div>
-                </a>
+            <section className="navi-menu">
+                {
+                    SolutionMenu.map((e, index) => (<SolutionMenuCard key={`key-${index}-${e._id}`} image={e.image} title={e.title} link={e.link} />))
+                }
             </section>
-            <section class="time">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <img src="img/zeliot7-(2).png" class="w-100" alt="" />
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-12 align-self-center">
-                            <h1>
-                                99.99% guaranteed Up-Time
-                            </h1>
-                            <p>
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-                                et justo duo dolores et ea rebum. Stet clita kasd.
-                            </p>
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6 col-12">
-                                    <a href="#" class="btn btn-default">
-                                        EXPLORE CMP
-                                    </a>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-12">
-                                    <a href="#" class="btn btn-default-2">
-                                        CHECK PRICING
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            {
+                FirstSection.map((e, index) => (<LeftRightSection key={`key-${index}-${e._id}`} title={e.title} paragraph={e.paragraph} image={e.image} inverse={false} exploreLink={e.firstLink} pricingLink={e.secondLink} />))
+            }
+            <section className="messages">
+                <Container fluid>
+                    <Row>
+                        {
+                            Milestone.map((e, index) => (<MilestoneBox key={`key-${index}-${e._id}`} title={e.title} paragraph={e.paragraph} />))
+                        }
+                    </Row>
+                </Container>
             </section>
-            <section class="messages">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg col-md-4 col-sm-6 col-6">
-                            <h3>
-                                800 Million
-                            </h3>
-                            <p>
-                                Messages per month
-                            </p>
-                        </div>
-                        <div class="col-lg col-md-4 col-sm-6 col-6">
-                            <h3>
-                                0.1 Billion
-                            </h3>
-                            <p>
-                                Kilometers driven per month
-                            </p>
-                        </div>
-                        <div class="col-lg col-md-4 col-sm-6 col-6">
-                            <h3>
-                                0.1 Billion
-                            </h3>
-                            <p>
-                                Alerts generated per month
-                            </p>
-                        </div>
-                        <div class="col-lg col-md-4 col-sm-6 col-6">
-                            <h3>
-                                100 Hours
-                            </h3>
-                            <p>
-                                Of vehicle movement tracked per month
-                            </p>
-                        </div>
-                        <div class="col-lg col-md-4 col-sm-6 col-6">
-                            <h3>
-                                0.1 Billion
-                            </h3>
-                            <p>
-                                Alerts generated per month
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="features">
-                <div class="container">
+            <section className="features">
+                <Container>
                     <h1>
                         Fleet Management Features
                     </h1>
-                    <div class="row">
-                        <div class="col-lg-2 col-md-4 col-sm-4 col-6">
-                            <div class="card">
-                                <div class="card-body">
-                                    <img class="img-fluid" src="img/z3.png" alt="" />
-                                    <p>
-                                        lorem Ispum
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-4 col-sm-4 col-6">
-                            <div class="card">
-                                <div class="card-body">
-                                    <img class="img-fluid" src="img/z.png" alt="" />
-                                    <p>
-                                        lorem Ispum
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-4 col-sm-4 col-6">
-                            <div class="card">
-                                <div class="card-body">
-                                    <img class="img-fluid" src="img/z2.png" alt="" />
-                                    <p>
-                                        lorem Ispum
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-4 col-sm-4 col-6">
-                            <div class="card">
-                                <div class="card-body">
-                                    <img class="img-fluid" src="img/z4.png" alt="" />
-                                    <p>
-                                        lorem Ispum
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-4 col-sm-4 col-6">
-                            <div class="card">
-                                <div class="card-body">
-                                    <img class="img-fluid" src="img/z6.png" alt="" />
-                                    <p>
-                                        lorem Ispum
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-4 col-sm-4 col-6">
-                            <div class="card">
-                                <div class="card-body">
-                                    <img class="img-fluid" src="img/z5.png" alt="" />
-                                    <p>
-                                        lorem Ispum
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-4 col-sm-4 col-6">
-                            <div class="card">
-                                <div class="card-body">
-                                    <img class="img-fluid" src="img/z7.png" alt="" />
-                                    <p>
-                                        lorem Ispum
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-4 col-sm-4 col-6">
-                            <div class="card">
-                                <div class="card-body">
-                                    <img class="img-fluid" src="img/z8.png" alt="" />
-                                    <p>
-                                        lorem Ispum
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-4 col-sm-4 col-6">
-                            <div class="card">
-                                <div class="card-body">
-                                    <img class="img-fluid" src="img/z9.png" alt="" />
-                                    <p>
-                                        lorem Ispum
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-4 col-sm-4 col-6">
-                            <div class="card">
-                                <div class="card-body">
-                                    <img class="img-fluid" src="img/z10.png" alt="" />
-                                    <p>
-                                        lorem Ispum
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-4 col-sm-4 col-6">
-                            <div class="card">
-                                <div class="card-body">
-                                    <img class="img-fluid" src="img/z1.png" alt="" />
-                                    <p>
-                                        lorem Ispum
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-4 col-sm-4 col-6">
-                            <div class="card">
-                                <div class="card-body">
-                                    <img class="img-fluid" src="img/z1.png" alt="" />
-                                    <p>
-                                        lorem Ispum
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    <Row>
+                        {
+                            Features.map((e, index) => (<FeaturedCard key={`key-${index}-${e._id}`} title={e.title} image={e.image} />))
+                        }
+                    </Row>
+                </Container>
             </section>
-            <section class="time">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <img src="img/zeliot7.png" class="w-100" alt="" />
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-12 align-self-center">
-                            <h1>
-                                99.99% guaranteed Up-Time
-                            </h1>
-                            <p>
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-                                et justo duo dolores et ea rebum. Stet clita kasd.
-                            </p>
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6 col-12">
-                                    <a href="#" class="btn btn-default">
-                                        EXPLORE CMP
-                                    </a>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-12">
-                                    <a href="#" class="btn btn-default-2">
-                                        CHECK PRICING
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="time">
-                <div class="container">
-                    <div class="row flex-column-reverse flex-lg-row">
-                        <div class="col-lg-6 col-md-6 col-12 align-self-center">
-                            <h1>
-                                99.99% guaranteed Up-Time
-                            </h1>
-                            <p>
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-                                et justo duo dolores et ea rebum. Stet clita kasd.
-                            </p>
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6 col-12">
-                                    <a href="#" class="btn btn-default">
-                                        EXPLORE CMP
-                                    </a>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-12">
-                                    <a href="#" class="btn btn-default-2">
-                                        CHECK PRICING
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <img src="img/zeliot8.png" class="w-100" alt="" />
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="time">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <img src="img/zeliot9.png" class="w-100" alt="" />
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-12 align-self-center">
-                            <h1>
-                                99.99% guaranteed Up-Time
-                            </h1>
-                            <p>
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-                                et justo duo dolores et ea rebum. Stet clita kasd.
-                            </p>
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6 col-12">
-                                    <a href="#" class="btn btn-default">
-                                        EXPLORE CMP
-                                    </a>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-12">
-                                    <a href="#" class="btn btn-default-2">
-                                        CHECK PRICING
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="stry">
+            {
+                FourthSection.map((e, index) => (<LeftRightSection key={`key-${index}-${e._id}`} title={e.title} paragraph={e.paragraph} image={e.image} inverse={false} exploreLink={e.firstLink} pricingLink={e.secondLink} />))
+            }
+            {
+                FifthSection.map((e, index) => (<LeftRightSection key={`key-${index}-${e._id}`} title={e.title} paragraph={e.paragraph} image={e.image} inverse={true} exploreLink={e.firstLink} pricingLink={e.secondLink} />))
+            }
+            {
+                SixthSection.map((e, index) => (<LeftRightSection key={`key-${index}-${e._id}`} title={e.title} paragraph={e.paragraph} image={e.image} inverse={false} exploreLink={e.firstLink} pricingLink={e.secondLink} />))
+            }
+            <section className="stry">
                 <h1>
                     Success Story
                 </h1>
-                <div class="container-fluid">
-                    <iframe src="https://www.youtube.com/embed/xcJtL7QggTI" title="YouTube video player" frameborder="0"
+                <div className="container-fluid">
+                    {/* <iframe src="https://www.youtube.com/embed/xcJtL7QggTI" title="YouTube video player" frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                    </iframe>
+                        allowFullScreen>
+                    </iframe> */}
+                    <ReactPlayer url='https://www.youtube.com/watch?v=ysz5S6PUM-U' width="100%" height="auto"/>
+
                 </div>
             </section>
         </PublicLayout>

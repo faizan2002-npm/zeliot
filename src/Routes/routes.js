@@ -91,5 +91,6 @@ var routes = [
         component: _SolutionFMS,
         layout: "",
     },
+    //Solutions
 ]
 export default routes;

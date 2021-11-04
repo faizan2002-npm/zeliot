@@ -3,7 +3,7 @@ import React from 'react'
 export const Loader = () => {
     return (
         <>
-            <section id="loader" class="lodd">
+            <section id="loader" className="lodd">
                 <h1>
                     Loading
                 </h1>
