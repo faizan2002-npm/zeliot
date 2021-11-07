@@ -16,16 +16,14 @@ export const Footer = () => {
                                 your inbox
                             </p>
                         </Col>
-                        <Col lg={6} md={6} xs={12}>
+                        <Col lg={{ span: 4, offset: 2 }} md={{ span: 4, offset: 2 }} xs={12}>
                             <div className="d-flex justify-content-end">
-                                <form>
                                     <input type="text" placeholder="ENTER YOUR EMAIL" />
-                                </form>
                             </div>
                             <div className="d-flex justify-content-end pad">
-                                <a href="#">
+                                <button className="btn btn-default">
                                     SUBMIT
-                                </a>
+                                </button>
                             </div>
                         </Col>
                     </Row>

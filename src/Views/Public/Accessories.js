@@ -1,13 +1,47 @@
-import React from 'react'
+import React,{useState} from 'react'
+import AccessoriesCard from '../../Components/Public/AccessoriesCard';
+import Images from '../../Constants/Images';
 import PublicLayout from './../../Layouts/Public/PublicLayout';
 
 export const Accessories = () => {
+    const [Accessories, setAccessories] = useState([
+        {
+            _id: 1,
+            title: "IP Camera",
+            image: Images.AccessoriesCardImage
+        },
+        {
+            _id: 2,
+            title: "IP Camera",
+            image: Images.AccessoriesCardImage
+        },
+        {
+            _id: 3,
+            title: "IP Camera",
+            image: Images.AccessoriesCardImage
+        },
+        {
+            _id: 4,
+            title: "IP Camera",
+            image: Images.AccessoriesCardImage
+        },
+        {
+            _id: 5,
+            title: "IP Camera",
+            image: Images.AccessoriesCardImage
+        },
+        {
+            _id: 6,
+            title: "IP Camera",
+            image: Images.AccessoriesCardImage
+        },
+    ])
     return (
         <PublicLayout>
-            <section class="Vehicle">
-                <div class="box">
-                    <div class="container">
-                        <div class="self">
+            <section className="Vehicle p-0">
+                <div className="box">
+                    <div className="container">
+                        <div className="self">
                             <h2>
                                 Accessories that help us make the Connected <br />
                                 Vehicle Ecosystem Possible.
@@ -16,117 +50,12 @@ export const Accessories = () => {
                     </div>
                 </div>
             </section>
-            <section class="list">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <div class="card">
-                                <img class="img-fluid" src="img/zeliot5.png" alt="" />
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">
-                                    IP Camera
-                                </h5>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <div class="card">
-                                <img class="img-fluid" src="img/zeliot5.png" alt="" />
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">
-                                    IP Camera
-                                </h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <div class="card">
-                                <img class="img-fluid" src="img/zeliot5.png" alt="" />
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">
-                                    IP Camera
-                                </h5>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <div class="card">
-                                <img class="img-fluid" src="img/zeliot5.png" alt="" />
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">
-                                    IP Camera
-                                </h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <div class="card">
-                                <img class="img-fluid" src="img/zeliot5.png" alt="" />
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">
-                                    IP Camera
-                                </h5>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <div class="card">
-                                <img class="img-fluid" src="img/zeliot5.png" alt="" />
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">
-                                    IP Camera
-                                </h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <div class="card">
-                                <img class="img-fluid" src="img/zeliot5.png" alt="" />
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">
-                                    IP Camera
-                                </h5>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <div class="card">
-                                <img class="img-fluid" src="img/zeliot5.png" alt="" />
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">
-                                    IP Camera
-                                </h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <div class="card">
-                                <img class="img-fluid" src="img/zeliot5.png" alt="" />
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">
-                                    IP Camera
-                                </h5>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <div class="card">
-                                <img class="img-fluid" src="img/zeliot5.png" alt="" />
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">
-                                    IP Camera
-                                </h5>
-                            </div>
-                        </div>
+            <section className="list bg-white">
+                <div className="container">
+                    <div className="row">
+                        {
+                            Accessories.map((e, index) => (<AccessoriesCard key={`key-${index}-${e._id}`} image={e.image} title={e.title} />))
+                        }
                     </div>
                 </div>
             </section>

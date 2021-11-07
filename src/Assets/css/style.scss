@@ -879,17 +879,22 @@ body {
   .pad {
     padding-top: 20px;
   }
+  button{
+    padding: 10px 70px;
+    font-size: 22px;
+    width: 100%;
+  }
   input {
     text-align: center;
     padding: 15px 70px;
     font-size: 18px;
     background: #212121cc;
     border: 0;
+    width: 100%;
     color: #fff;
     border-radius: 50px;
   }
 }
-
 #footeraccess {
   padding: 50px 0;
   background-color: #fff;

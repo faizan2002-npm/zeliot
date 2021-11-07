@@ -37,7 +37,7 @@ export const Header = () => {
                         </Link>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
-                            <Nav className="mr-auto" as="ul" id="primary_main_menu">
+                            <Nav className="ms-auto" as="ul" id="primary_main_menu">
                                 {
                                     getRoutes(routes)
                                 }

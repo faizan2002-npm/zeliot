@@ -1,8 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PublicLayout from './../../Layouts/Public/PublicLayout';
 import Images from "./../../Constants/Images";
+import MilestoneBox from './../../Components/Public/MilestoneBox';
+import LeftRightSection from './../../Components/Public/LeftRightSection';
+import { Col, Container, Image, Row } from 'react-bootstrap';
+import SolutionMenuCard from './../../Components/Public/SolutionMenuCard';
+import PostCard from './../../Components/Public/PostCard';
+import { Link } from 'react-router-dom';
 
 export const Solutions = () => {
+    const [FirstSection, setFirstSection] = useState([{
+        _id: 1,
+        image: Images.SolutionEVSFirstImage,
+        title: '99.99% guaranteed Up-Time',
+        paragraph: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd.',
+        firstLink: '#',
+        secondLink: '#',
+    }]);
     const [SolutionMenu, setSolutionMenu] = useState([
         {
             _id: 1,
@@ -80,6 +94,22 @@ export const Solutions = () => {
             paragraph: 'Alerts generated per month',
         },
     ])
+    const [Post, setPost] = useState([
+        {
+            _id: 1,
+            title: 'Managing inventory has never been easier, be it Telematics devices or SIM cards. We got you covered.',
+            paragraph: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd.',
+            link: '/',
+            image: Images.PostCard,
+        },
+        {
+            _id: 2,
+            title: 'Looking for an easier way to plan everyday trips for your employees? You’ll love Automatic Routing!',
+            paragraph: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd.',
+            link: '/',
+            image: Images.PostCard,
+        }
+    ])
     return (
         <PublicLayout>
             <section className="navi-menu">
@@ -87,11 +117,11 @@ export const Solutions = () => {
                     SolutionMenu.map((e, index) => (<SolutionMenuCard key={`key-${index}-${e._id}`} image={e.image} title={e.title} link={e.link} />))
                 }
             </section>
-            <section class="iop">
-                <div class="">
-                    <img src="img/zeliot10.png" class="w-100 img-fluid" alt="" />
+            {/* <section className="iop">
+                <div className="">
+                    <img src="img/zeliot10.png" className="w-100 img-fluid" alt="" />
                 </div>
-            </section>
+            </section> */}
             <section className="messages">
                 <Container fluid>
                     <Row>
@@ -101,154 +131,62 @@ export const Solutions = () => {
                     </Row>
                 </Container>
             </section>
-            <section class="bann">
-                <div class="container">
-                    <div class="text-center">
+            <section className="bann">
+                <div className="container">
+                    <div className="text-center">
                         <h1>
                             Custom Built Solutions based on Customer Needs
                         </h1>
-                        <img src="img/zeliot11.png" class="img-fluid w-100" alt="" />
+                        <Image fluid src={Images.SolutionSection} className="w-100" />
                     </div>
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-12 self">
-                            <h2>
+                    <Row>
+                        <Col lg={6} md={6} xs={12} className="align-self-center">
+                            <h1>
                                 Lorem Ipsum dior Lorem Ipsum dior Lorem Ipsum dior Lorem Ipsum dior.
-                            </h2>
-                            <p>
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-                                et justo duo dolores et ea rebum. Stet clita kasd.
-                            </p>
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6 col-12 displaay">
-                                    <a href="#" class="btn btn-default ">
-                                        EXPLORE CMP
-                                    </a>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-12 displaay">
-                                    <a href="#" class="btn btn-default-2 ">
-                                        CHECK PRICING
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="time">
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-lg-6 col-md-6 col-12 align-self-center">
-                            <h1>
-                                99.99% guaranteed Up-Time
                             </h1>
                             <p>
                                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
                                 invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
                                 et justo duo dolores et ea rebum. Stet clita kasd.
                             </p>
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6 col-12">
-                                    <a href="#" class="btn btn-default">
+                            <Row>
+                                <Col lg={6} md={6} xs={12}>
+                                    <Link href="/" className="btn btn-default">
                                         EXPLORE CMP
-                                    </a>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-12">
-                                    <a href="#" class="btn btn-default-2">
+                                    </Link>
+                                </Col>
+                                <Col lg={6} md={6} xs={12}>
+                                    <Link href="/" className="btn btn-default-2">
                                         CHECK PRICING
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <img src="img/zeliot7-(2).png" class="w-100" alt="" />
-                        </div>
-                    </div>
+                                    </Link>
+                                </Col>
+                            </Row>
+                        </Col>
+                    </Row>
                 </div>
             </section>
-            <section class="never">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <div class="card">
-                                <img class="img-fluid" src="img/zeliot13.png" alt="" />
-                                <div class="card-body">
-                                    <h5 class="card-title">
-                                        Managing inventory has never been easier, be it Telematics devices or SIM cards.We
-                                        got you covered.
-                                    </h5>
-                                    <p class="card-text">
-                                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                                        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.At vero
-                                        eos et accusam et justo duo dolores et ea rebum.Stet clita kasd.
-                                    </p>
-                                    <a href="#" class="btn btn-default">
-                                        EXPLORE CMP
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <div class="card">
-                                <img class="img-fluid" src="img/zeliot13.png" alt="" />
-                                <div class="card-body">
-                                    <h5 class="card-title">
-                                        Looking for an easier way to plan everyday trips for your employees?You’ll love Automatic Routing!
-                                    </h5>
-                                    <p class="card-text">
-                                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                                        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.At vero
-                                        eos et accusam et justo duo dolores et ea rebum.Stet clita kasd.
-                                    </p>
-                                    <a href="#" class="btn btn-default">
-                                        EXPLORE CMP
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            {
+                FirstSection.map((e, index) => (<LeftRightSection key={`key-${index}-${e._id}`} theme='dark' key={`key-${index}-${e._id}`} title={e.title} paragraph={e.paragraph} image={e.image} inverse={true} exploreLink={e.firstLink} pricingLink={e.secondLink} />))
+            }
+            <section className="never">
+                <Container>
+                    <Row>
+                        {
+                            Post.map((e, index) => (<PostCard key={`key-${index}-${e._id}`} image={e.image} title={e.title} paragraph={e.paragraph} link={e.link} />))
+                        }
+                    </Row>
+                </Container>
             </section>
-            <section class="tim">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <img src="img/zeliot7-(2).png" class="w-100" alt="" />
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-12 align-self-center">
-                            <h1>
-                                99.99% guaranteed Up-Time
-                            </h1>
-                            <p>
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-                                et justo duo dolores et ea rebum. Stet clita kasd.
-                            </p>
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6 col-12">
-                                    <a href="#" class="btn btn-default">
-                                        EXPLORE CMP
-                                    </a>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-12">
-                                    <a href="#" class="btn btn-default-2">
-                                        CHECK PRICING
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-            <section class="action">
-                <div class="container">
+            {
+                FirstSection.map((e, index) => (<LeftRightSection key={`key-${index}-${e._id}`} theme='light' key={`key-${index}-${e._id}`} title={e.title} paragraph={e.paragraph} image={e.image} inverse={false} exploreLink={e.firstLink} pricingLink={e.secondLink} />))
+            }
+            <section className="action">
+                <div className="container">
                     <h1>
                         See our solution live, in action
                     </h1>
-                    <div>
-                        <img src="img/zeliot14.png" class="img-fluid" alt="" />
+                    <div className="text-center">
+                        <Image fluid src={Images.SolutionActionSection}  alt="" />
                     </div>
                 </div>
             </section>

@@ -225,10 +225,6 @@ export const SolutionEVS = () => {
                     Success Story
                 </h1>
                 <div className="container-fluid">
-                    {/* <iframe src="https://www.youtube.com/embed/xcJtL7QggTI" title="YouTube video player" frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen>
-                    </iframe> */}
                     <ReactPlayer url='https://www.youtube.com/watch?v=ysz5S6PUM-U' width="100%" height="auto"/>
 
                 </div>
