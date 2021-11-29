@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./../../Assets/css/style.scss";
 
 const PublicLayout = ({ children }) => {
-    const [Loading, setLoading] = useState(true);
+    const [Loading, setLoading] = useState(false);
     const adjuster = () => {
         document.getElementById("main").style.paddingTop = `${document.getElementById("header").offsetHeight}px`;
         document.addEventListener("DOMContentLoaded", function (event) {

@@ -60,7 +60,7 @@ export const SolutionFMS = () => {
     ])
     const [FirstSection, setFirstSection] = useState([{
         _id: 1,
-        image: Images.SolutionEVSFirstImage,
+        image: Images.SolutionFMS1,
         title: '99.99% guaranteed Up-Time',
         paragraph: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd.',
         firstLink: '#',
@@ -173,11 +173,11 @@ export const SolutionFMS = () => {
     }]);
     const [SixthSection, setSixthSection] = useState([{
         _id: 1,
-        image: Images.SolutionEVSFourthImage,
-        title: '99.99% guaranteed Up-Time',
-        paragraph: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd.',
-        firstLink: '#',
-        secondLink: '#',
+        image: Images.SolutionFMS2,
+        title: 'Get your fleet related information right at your finger tips. Track and manage your vehicles on the go!',
+        paragraph: '',
+        appleLink: '#',
+        androidLink : '#',
     }]);
     return (
         <PublicLayout>
@@ -211,13 +211,13 @@ export const SolutionFMS = () => {
                 </Container>
             </section>
             {
-                FourthSection.map((e, index) => (<LeftRightSection key={`key-${index}-${e._id}`} title={e.title} paragraph={e.paragraph} image={e.image} inverse={true} exploreLink={e.firstLink} pricingLink={e.secondLink} />))
+                FourthSection.map((e, index) => (<LeftRightSection key={`key-${index}-${e._id}`} title={e.title} paragraph={e.paragraph} image={e.image} inverse={false} exploreLink={e.firstLink} pricingLink={e.secondLink} />))
             }
             {
-                FifthSection.map((e, index) => (<LeftRightSection key={`key-${index}-${e._id}`} title={e.title} paragraph={e.paragraph} image={e.image} inverse={false} exploreLink={e.firstLink} pricingLink={e.secondLink} />))
+                FifthSection.map((e, index) => (<LeftRightSection key={`key-${index}-${e._id}`} title={e.title} paragraph={e.paragraph} image={e.image} inverse={true} exploreLink={e.firstLink} pricingLink={e.secondLink} />))
             }
             {
-                SixthSection.map((e, index) => (<LeftRightSection key={`key-${index}-${e._id}`} title={e.title} paragraph={e.paragraph} image={e.image} inverse={true} exploreLink={e.firstLink} pricingLink={e.secondLink} />))
+                SixthSection.map((e, index) => (<LeftRightSection key={`key-${index}-${e._id}`} title={e.title} paragraph={e.paragraph} image={e.image} inverse={false} appleLink={e.appleLink} androidLink={e.androidLink} />))
             }
             <section className="mobile">
                 <Container>

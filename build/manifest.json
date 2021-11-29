@@ -1,0 +1,20 @@
+{
+  "short_name": "Zeliot",
+  "name": "Enterprise Mobility Solution | Enterprise IOT Solution",
+  "icons": [
+    {
+      "src": "favicon.jfif",
+      "sizes": "225x225 64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "zeliot-logo.png",
+      "type": "image/png",
+      "sizes": "344x84"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#fff",
+  "background_color": "#000"
+}

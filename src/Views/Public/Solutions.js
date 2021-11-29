@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 export const Solutions = () => {
     const [FirstSection, setFirstSection] = useState([{
         _id: 1,
-        image: Images.SolutionEVSFirstImage,
+        image: Images.Solution1,
         title: '99.99% guaranteed Up-Time',
         paragraph: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd.',
         firstLink: '#',

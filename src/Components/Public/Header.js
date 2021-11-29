@@ -7,7 +7,7 @@ import routes from './../../Routes/routes';
 export const Header = () => {
     const getRoutes = (routes) => {
         return routes.map((prop, key) => {
-            if (prop.layout === "") {
+            if (prop.layout === "" && prop.show != 'no') {
                 if (prop.name === 'Home') {
                     return (
                         <Nav.Item as="li" key={key}>
@@ -33,7 +33,7 @@ export const Header = () => {
                 <Navbar as="nav" variant="dark" expand="lg">
                     <Container>
                         <Link className="navbar-brand" to="/">
-                            <Image src={SiteSettings.SiteSettings[0].SITE_LOGO} alt="" className="w-50" fluid />
+                            <Image src={SiteSettings.SiteSettings[0].SITE_LOGO} alt="" fluid />
                         </Link>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">

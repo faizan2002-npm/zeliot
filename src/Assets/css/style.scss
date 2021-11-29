@@ -1,6 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap");
 body {
   margin: 0;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Nunito", sans-serif;
   background-color: #0d0d0d;
   color: #fff;
   * {
@@ -14,11 +16,7 @@ body {
   }
   .btn-default {
     background: rgb(255, 42, 107);
-    background: linear-gradient(
-      180deg,
-      rgba(255, 42, 107, 1) 0%,
-      rgba(255, 94, 58, 1) 100%
-    );
+    background: linear-gradient(180deg, rgba(255, 42, 107, 1) 0%, rgba(255, 94, 58, 1) 100%);
     padding: 10px 10px;
     color: #fff;
     border-radius: 50px;
@@ -26,7 +24,7 @@ body {
     text-decoration: none;
     &:hover {
       color: #fff;
-      border: 2px solid #fff;
+      // border: 2px solid #fff;
       background-position: 500px;
     }
   }
@@ -41,33 +39,36 @@ body {
     &:hover {
       color: #fff;
       background: rgb(255, 42, 107);
-      background: linear-gradient(
-        180deg,
-        rgba(255, 42, 107, 1) 0%,
-        rgba(255, 94, 58, 1) 100%
-      );
+      background: linear-gradient(180deg, rgba(255, 42, 107, 1) 0%, rgba(255, 94, 58, 1) 100%);
     }
   }
 }
 #header {
+  font-family: "Nunito Sans", sans-serif !important;
   position: fixed;
   padding: 5px;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1050;
-  background-color: #212121cc;
+  background-color: #212121b3;
   backdrop-filter: blur(10px);
   nav {
     padding: 0;
     .w50 {
       width: 40%;
     }
+    .navbar-brand {
+      img {
+        max-width: 140px;
+      }
+    }
   }
   ul {
     li {
       padding: 10px 11px;
       a {
+        font: normal normal bold 20px/24px Nunito Sans;
         color: rgba(229, 231, 235, 0.5);
         font-size: 1.125rem;
         &:hover {
@@ -145,13 +146,13 @@ body {
   }
   .Sorry {
     padding: 150px 0 50px;
-    a {
-      background: #ff2a6b;
-      color: #fff;
-      border-radius: 50px;
-      text-decoration: none;
-      padding: 12px 77px;
-    }
+    // a {
+    //   background: #ff2a6b;
+    //   color: #fff;
+    //   border-radius: 50px;
+    //   text-decoration: none;
+    //   padding: 12px 77px;
+    // }
     h2 {
       font-size: 32px;
       font-weight: 800;
@@ -168,10 +169,13 @@ body {
       padding: 300px 0;
       background-repeat: no-repeat;
       background-size: cover;
+      background-color: #00000040;
+      background-blend-mode: overlay;
       .self {
         text-align: center;
         align-self: center;
         h2 {
+          font: normal normal bold 32px/48px Nunito Sans;
           font-weight: 600;
         }
       }
@@ -179,6 +183,13 @@ body {
   }
   .list {
     padding: 50px 0;
+    h2 {
+      text-align: center;
+      font: normal normal 800 32px/48px Nunito Sans;
+      letter-spacing: 0px;
+      color: #212121;
+      margin-bottom: 40px;
+    }
     .card {
       border: 0;
       background-color: #e5e7eb;
@@ -189,9 +200,10 @@ body {
     }
     .card-title {
       color: black;
-      text-align: center;
+      // text-align: center;
       font-size: 28px;
       font-weight: 700;
+      margin-bottom: 30px;
     }
   }
   .lodd {
@@ -373,7 +385,7 @@ body {
     padding: 50px 0 60px;
     h1 {
       padding-bottom: 40px;
-      font-weight: 600;
+      font-weight: 800;
       font-size: 32px;
     }
     .row {
@@ -437,6 +449,9 @@ body {
     }
     a {
       width: 100%;
+      i{
+        font-size: 40px;
+      }
     }
     p {
       margin: 0 0 30px;
@@ -485,18 +500,25 @@ body {
       }
     }
   }
-  .tim{
+  .tim {
     padding: 50px 0;
     background-color: #fff;
+    h2 {
+      font-size: 46px;
+      font-weight: 700;
+      margin: 0 0 30px;
+      color: black;
+      text-align: center;
+    }
     h1 {
       font-size: 36px;
       font-weight: 700;
       margin: 0 0 30px;
       color: black;
     }
-    .btn-default-2{
+    .btn-default-2 {
       color: #000;
-    border: 2px solid #000;
+      border: 2px solid #000;
     }
     a {
       width: 100%;
@@ -563,6 +585,9 @@ body {
     }
     a {
       width: 100%;
+      i{
+        font-size: 40px;
+      }
     }
     p {
       margin: 0 0 30px;
@@ -679,6 +704,9 @@ body {
     }
     a {
       width: 100%;
+      i{
+        font-size: 40px;
+      }
     }
     p {
       margin: 0 0 30px;
@@ -769,7 +797,7 @@ body {
   }
 
   //product
-  .link { 
+  .link {
     a {
       text-decoration: none;
       color: #fff;
@@ -803,11 +831,7 @@ body {
         &:hover {
           color: #fff;
           background: rgb(255, 42, 107);
-          background: linear-gradient(
-            180deg,
-            rgba(255, 42, 107, 1) 0%,
-            rgba(255, 94, 58, 1) 100%
-          );
+          background: linear-gradient(180deg, rgba(255, 42, 107, 1) 0%, rgba(255, 94, 58, 1) 100%);
         }
       }
       h2 {
@@ -853,11 +877,7 @@ body {
       &:hover {
         color: #fff;
         background: rgb(255, 42, 107);
-        background: linear-gradient(
-          180deg,
-          rgba(255, 42, 107, 1) 0%,
-          rgba(255, 94, 58, 1) 100%
-        );
+        background: linear-gradient(180deg, rgba(255, 42, 107, 1) 0%, rgba(255, 94, 58, 1) 100%);
       }
     }
   }
@@ -879,7 +899,7 @@ body {
   .pad {
     padding-top: 20px;
   }
-  button{
+  button {
     padding: 10px 70px;
     font-size: 22px;
     width: 100%;

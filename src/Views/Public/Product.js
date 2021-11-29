@@ -12,7 +12,47 @@ export const Product = () => {
     const [FirstSection, setFirstSection] = useState([{
         _id: 1,
         image: Images.SolutionEVSFirstImage,
-        title: '99.99% guaranteed Up-Time',
+        title: 'Data Ingestion',
+        paragraph: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd.',
+        firstLink: '#',
+        secondLink: '#',
+    }]);
+    const [SecondSection, setSecondSection] = useState([{
+        _id: 1,
+        image: Images.SolutionEVSFirstImage,
+        title: 'Maps Engine',
+        paragraph: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd.',
+        firstLink: '#',
+        secondLink: '#',
+    }]);
+    const [ThirsSection, setThirsSection] = useState([{
+        _id: 1,
+        image: Images.SolutionEVSFirstImage,
+        title: 'Stream Processor',
+        paragraph: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd.',
+        firstLink: '#',
+        secondLink: '#',
+    }]);
+    const [FourthSection, setFourthSection] = useState([{
+        _id: 1,
+        image: Images.SolutionEVSFirstImage,
+        title: 'Alerts & Notifications',
+        paragraph: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd.',
+        firstLink: '#',
+        secondLink: '#',
+    }]);
+    const [FifthSection, setFifthSection] = useState([{
+        _id: 1,
+        image: Images.SolutionEVSFirstImage,
+        title: 'Device Provisioning',
+        paragraph: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd.',
+        firstLink: '#',
+        secondLink: '#',
+    }]);
+    const [SixthSection, setSixthSection] = useState([{
+        _id: 1,
+        image: Images.SolutionEVSFirstImage,
+        title: 'Reporting & Analytics',
         paragraph: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd.',
         firstLink: '#',
         secondLink: '#',
@@ -41,14 +81,12 @@ export const Product = () => {
                             <h1 style={{
                                 color: "#000"
                             }}>
-                                Lorem Ipsum dior Lorem Ipsum dior Lorem Ipsum dior Lorem Ipsum dior.
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.
                             </h1>
                             <p style={{
                                 color: "#000"
                             }}>
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-                                et justo duo dolores et ea rebum. Stet clita kasd.
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd.
                             </p>
                             <Row>
                                 <Col lg={6} md={6} xs={12}>
@@ -70,22 +108,22 @@ export const Product = () => {
                 </Container>
             </section>
             {
-                FirstSection.map((e, index) => (<LeftRightSection key={`key-${index}-${e._id}`} theme='light' key={`key-${index}-${e._id}`} title={e.title} paragraph={e.paragraph} image={e.image} inverse={false} exploreLink={e.firstLink} pricingLink={e.secondLink} />))
+                FirstSection.map((e, index) => (<LeftRightSection heading='Managed Services on Zeliot’s CMP' key={`key-${index}-${e._id}`} theme='light' key={`key-${index}-${e._id}`} title={e.title} paragraph={e.paragraph} image={e.image} inverse={false} exploreLink={e.firstLink} pricingLink={e.secondLink} />))
             }
             {
-                FirstSection.map((e, index) => (<LeftRightSection key={`key-${index}-${e._id}`} theme='light' key={`key-${index}-${e._id}`} title={e.title} paragraph={e.paragraph} image={e.image} inverse={true} exploreLink={e.firstLink} pricingLink={e.secondLink} />))
+                SecondSection.map((e, index) => (<LeftRightSection key={`key-${index}-${e._id}`} theme='light' key={`key-${index}-${e._id}`} title={e.title} paragraph={e.paragraph} image={e.image} inverse={true} exploreLink={e.firstLink} pricingLink={e.secondLink} />))
             }
             {
-                FirstSection.map((e, index) => (<LeftRightSection key={`key-${index}-${e._id}`} theme='light' key={`key-${index}-${e._id}`} title={e.title} paragraph={e.paragraph} image={e.image} inverse={false} exploreLink={e.firstLink} pricingLink={e.secondLink} />))
+                ThirsSection.map((e, index) => (<LeftRightSection key={`key-${index}-${e._id}`} theme='light' key={`key-${index}-${e._id}`} title={e.title} paragraph={e.paragraph} image={e.image} inverse={false} exploreLink={e.firstLink} pricingLink={e.secondLink} />))
             }
             {
-                FirstSection.map((e, index) => (<LeftRightSection key={`key-${index}-${e._id}`} theme='light' key={`key-${index}-${e._id}`} title={e.title} paragraph={e.paragraph} image={e.image} inverse={true} exploreLink={e.firstLink} pricingLink={e.secondLink} />))
+                FourthSection.map((e, index) => (<LeftRightSection key={`key-${index}-${e._id}`} theme='light' key={`key-${index}-${e._id}`} title={e.title} paragraph={e.paragraph} image={e.image} inverse={true} exploreLink={e.firstLink} pricingLink={e.secondLink} />))
             }
             {
-                FirstSection.map((e, index) => (<LeftRightSection key={`key-${index}-${e._id}`} theme='light' key={`key-${index}-${e._id}`} title={e.title} paragraph={e.paragraph} image={e.image} inverse={false} exploreLink={e.firstLink} pricingLink={e.secondLink} />))
+                FifthSection.map((e, index) => (<LeftRightSection key={`key-${index}-${e._id}`} theme='light' key={`key-${index}-${e._id}`} title={e.title} paragraph={e.paragraph} image={e.image} inverse={false} exploreLink={e.firstLink} pricingLink={e.secondLink} />))
             }
             {
-                FirstSection.map((e, index) => (<LeftRightSection key={`key-${index}-${e._id}`} theme='light' key={`key-${index}-${e._id}`} title={e.title} paragraph={e.paragraph} image={e.image} inverse={true} exploreLink={e.firstLink} pricingLink={e.secondLink} />))
+                SixthSection.map((e, index) => (<LeftRightSection key={`key-${index}-${e._id}`} theme='light' key={`key-${index}-${e._id}`} title={e.title} paragraph={e.paragraph} image={e.image} inverse={true} exploreLink={e.firstLink} pricingLink={e.secondLink} />))
             }
         </PublicLayout>
     )

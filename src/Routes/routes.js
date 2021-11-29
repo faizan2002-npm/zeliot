@@ -29,10 +29,14 @@ const _Accessories = () => {
     UseDocumentTitle(`${SiteSettings.SiteSettings[0].SITE_TITLE} | Accessories`)
     return <Accessories />
 }
-// const _OEM = () => {
-//     UseDocumentTitle(`${SiteSettings.SiteSettings[0].SITE_TITLE} | OEM`)
-//     return <OEM />
-// }
+const _Support = () => {
+    UseDocumentTitle(`${SiteSettings.SiteSettings[0].SITE_TITLE} | Accessories`)
+    return <Home />
+}
+const _Pricing = () => {
+    UseDocumentTitle(`${SiteSettings.SiteSettings[0].SITE_TITLE} | Accessories`)
+    return <Home />
+}
 const _SolutionEVS = () => {
     UseDocumentTitle(`${SiteSettings.SiteSettings[0].SITE_TITLE} | Solutions EVS`)
     return <SolutionEVS />
@@ -45,20 +49,8 @@ var routes = [
     //Public Routes
     {
         path: "/",
-        name: "Home",
+        name: "Company",
         component: _Home,
-        layout: "",
-    },
-    // {
-    //     path: "/Contact",
-    //     name: "Contact",
-    //     component: _Contact,
-    //     layout: "",
-    // },
-    {
-        path: "/Solutions",
-        name: "Solutions",
-        component: _Solutions,
         layout: "",
     },
     {
@@ -68,9 +60,27 @@ var routes = [
         layout: "",
     },
     {
+        path: "/Solutions",
+        name: "Solutions",
+        component: _Solutions,
+        layout: "",
+    },
+    {
         path: "/Accessories",
-        name: "Accessories",
+        name: "Industries",
         component: _Accessories,
+        layout: "",
+    },
+    {
+        path: "/Support",
+        name: "Support",
+        component: _Support,
+        layout: "",
+    },
+    {
+        path: "/Pricing",
+        name: "Pricing",
+        component: _Pricing,
         layout: "",
     },
     // {
@@ -84,12 +94,14 @@ var routes = [
         name: "SolutionEVS",
         component: _SolutionEVS,
         layout: "",
+        show:"no"
     },
     {
         path: "/SolutionFMS",
         name: "SolutionFMS",
         component: _SolutionFMS,
         layout: "",
+        show:"no"
     },
     //Solutions
 ]
