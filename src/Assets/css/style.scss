@@ -513,7 +513,7 @@ body {
     h1 {
       font-size: 36px;
       font-weight: 700;
-      margin: 0 0 30px;
+      margin: 20px 0 ;
       color: black;
     }
     .btn-default-2 {
@@ -1115,16 +1115,27 @@ body {
   #main .banne .row h2 {
     font-size: 27px;
   }
-  #main .banne .row a {
-    width: 65%;
+  #main .bann .row a,#main .tim a{
+    margin: 10px 0;
+    display: block;
+  }
+  #main .never .row .card .card-body a{
+    width: 100%;
+  }
+  #main .Sorry {
+padding: 70px 0 50px;
+  }
+  #main .Sorry h2{
+    margin:20px 0 10px;
   }
   .displaay {
     display: flex;
     justify-content: center;
   }
-  #main .time a {
-    width: 65%;
-  }
+  
+  // #main .time a {
+  //   width: 65%;
+  // }
   #main .elitr h1 {
     margin: 12px 0 18px;
   }

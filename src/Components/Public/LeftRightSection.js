@@ -84,7 +84,7 @@ const LeftRightSection = ({ heading, title, paragraph, image, inverse, exploreLi
                                     {
                                         (heading) ? <h2 >{heading}</h2> : ''
                                     }
-                                    <Row className="flex-column-reverse flex-lg-row">
+                                    <Row className="flex-column-reverse flex-md-row flex-lg-row row">
                                         <Col lg={6} md={6} xs={12} className="align-self-center">
                                             <h1>
                                                 {title}

@@ -9,7 +9,7 @@ export const NotFound = () => {
         <PublicLayout>
             <section className="Sorry">
                 <Container>
-                    <Row>
+                <Row className="flex-column-reverse flex-md-row flex-lg-row row">
                         <Col lg={5} md={5} xs={12} className="align-self-center">
                             <h2>
                                 Sorry, the page you are looking for is not available at this moment.
@@ -19,7 +19,7 @@ export const NotFound = () => {
                                 awesome stuff to check out.
                             </p>
                             <Row>
-                                <Col lg={6} md={6} xs={12}>
+                                <Col lg={6} md={7} xs={12}>
                                     <Link to="/" className="btn btn-default w-100">
                                         Go to home page
                                     </Link>
