@@ -32,10 +32,10 @@ export const Header = () => {
             <header id="header">
                 <Navbar as="nav" variant="dark" expand="lg">
                     <Container>
+                        <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Link className="navbar-brand" to="/">
                             <Image src={SiteSettings.SiteSettings[0].SITE_LOGO} alt="" fluid />
                         </Link>
-                        <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="ms-auto" as="ul" id="primary_main_menu">
                                 {

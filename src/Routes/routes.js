@@ -1,22 +1,19 @@
 
 import { Home } from './../Views/Public/Home';
-// import { Contact } from './../Views/Public/Contact';
 import { Solutions } from './../Views/Public/Solutions';
 import { Product } from './../Views/Public/Product';
 import { Accessories } from './../Views/Public/Accessories';
-// import { OEM } from './../Views/Public/OEM';
 import { SolutionEVS } from './../Views/Public/SolutionEVS';
 import { SolutionFMS } from './../Views/Public/SolutionFMS';
 import UseDocumentTitle from './../UseDocumentTitle';
 import SiteSettings from "./../Constants/SiteSettings";
+import { AquilaTrack } from './../Views/Public/AquilaTrack';
+import { AquilaSchool } from './../Views/Public/AquilaSchool';
+import { AquilaOEM } from './../Views/Public/AquilaOEM';
 const _Home = () => {
     UseDocumentTitle(`${SiteSettings.SiteSettings[0].SITE_TITLE} | Home`)
     return <Home />
 }
-// const _Contact = () => {
-//     UseDocumentTitle(`${SiteSettings.SiteSettings[0].SITE_TITLE} | Contact`)
-//     return <Contact />
-// }
 const _Solutions = () => {
     UseDocumentTitle(`${SiteSettings.SiteSettings[0].SITE_TITLE} | Solutions`)
     return <Solutions />
@@ -45,12 +42,42 @@ const _SolutionFMS = () => {
     UseDocumentTitle(`${SiteSettings.SiteSettings[0].SITE_TITLE} | Solutions FMS`)
     return <SolutionFMS />
 }
+const _AquilaTrack = () => {
+    UseDocumentTitle(`${SiteSettings.SiteSettings[0].SITE_TITLE} | AquilaTrack | Telematics Tracking`)
+    return <AquilaTrack />
+}
+const _AquilaSchool = () => {
+    UseDocumentTitle(`${SiteSettings.SiteSettings[0].SITE_TITLE} | School | School Transportation Management`)
+    return <AquilaSchool />
+}
+const _AquilaOEM = () => {
+    UseDocumentTitle(`${SiteSettings.SiteSettings[0].SITE_TITLE} | Automotive OEM & Enterprise solutions`)
+    return <AquilaOEM />
+}
 var routes = [
     //Public Routes
     {
         path: "/",
         name: "Company",
         component: _Home,
+        layout: "",
+    },
+    {
+        path: "/AquilaTrack",
+        name: "AquilaTrack",
+        component: _AquilaTrack,
+        layout: "",
+    },
+    {
+        path: "/AquilaSchool",
+        name: "AquilaSchool",
+        component: _AquilaSchool,
+        layout: "",
+    },
+    {
+        path: "/AquilaOEM",
+        name: "AquilaOEM",
+        component: _AquilaOEM,
         layout: "",
     },
     {
@@ -83,12 +110,6 @@ var routes = [
         component: _Pricing,
         layout: "",
     },
-    // {
-    //     path: "/OEM",
-    //     name: "OEM",
-    //     component: _OEM,
-    //     layout: "",
-    // },
     {
         path: "/SolutionEVS",
         name: "SolutionEVS",

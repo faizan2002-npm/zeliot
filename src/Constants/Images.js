@@ -40,6 +40,47 @@ import AccessoriesCardImage8 from "./../Assets/img/product_8.png";
 import AccessoriesCardImage9 from "./../Assets/img/product_9.png";
 import AccessoriesCardImage10 from "./../Assets/img/product_10.png";
 import ComponentNotFound from "./../Assets/img/404.png";
+import SolutionEVSFeatureNintheImage from "./../Assets/img/GODs-View.svg";
+import AquilaTrack1 from "./../Assets/img/Subtraction.png";
+import AquilaTrack2 from "./../Assets/img/FasterReportsGeneration.svg";
+import AquilaTrack3 from "./../Assets/img/BatchAnalyticsIntegrations.svg";
+import AquilaTrack4 from "./../Assets/img/OptimisedMAPSUsage.svg";
+import AquilaTrack5 from "./../Assets/img/UpgradedDataProcessingEngine.svg";
+import AquilaTrack6 from "./../Assets/img/Signup.svg";
+import AquilaTrack7 from "./../Assets/img/Onboard.svg";
+import AquilaTrack8 from "./../Assets/img/compass.svg";
+import AquilaSchool1 from "./../Assets/img/school_2.png";
+import AquilaSchool2 from "./../Assets/img/_1_school.png";
+import AquilaSchool3 from "./../Assets/img/_2_school.png";
+import AquilaSchool4 from "./../Assets/img/_3_school.png";
+import AquilaSchool5 from "./../Assets/img/OTPBasedLogin.svg";
+import AquilaSchool6 from "./../Assets/img/ParentApplication.svg";
+import AquilaSchool7 from "./../Assets/img/AdministrationApplication.svg";
+import AquilaSchool8 from "./../Assets/img/FacialRecognition.svg";
+import AquilaSchool9 from "./../Assets/img/EasyIntegrationwithERPs.svg";
+import AquilaSchool10 from "./../Assets/img/SOSAlerts.svg";
+
+
+import AquilaOEM1 from "./../Assets/img/EndUserApplication.svg";
+import AquilaOEM2 from "./../Assets/img/FirmwareOvertheAirUpdateTool.svg";
+import AquilaOEM3 from "./../Assets/img/Bi-DirectionalTool.svg";
+import AquilaOEM4 from "./../Assets/img/DeviceConfigurationTool.svg";
+import AquilaOEM5 from "./../Assets/img/EndOfTheLineTool.svg";
+import AquilaOEM6 from "./../Assets/img/RoadSideAssistanceModule.svg";
+import AquilaOEM7 from "./../Assets/img/PredictiveAnalytics.svg";
+import AquilaOEM8 from "./../Assets/img/AquilaTrackPortalForManagement.svg";
+import AquilaOEM9 from "./../Assets/img/CustomOEMAPISolution.svg";
+import AquilaOEM10 from "./../Assets/img/WhitelablingOfTheApplication.svg";
+import AquilaOEM11 from "./../Assets/img/PushAds.svg";
+import AquilaOEM12 from "./../Assets/img/Support.svg";
+import AquilaOEM13 from "./../Assets/img/mark-adriane-NI03-W7N6YE-unsplash.png";
+import AquilaOEM14 from "./../Assets/img/robin-vet-q6LFMQ6wVZ0-unsplash.png";
+import AquilaOEM15 from "./../Assets/img/harley-davidson-eeTJKC_wz34-unsplash.png";
+import AquilaOEM16 from "./../Assets/img/martin-katler-WyGUO1k7AEQ-unsplash.png";
+import AquilaOEM17 from "./../Assets/img/Group-924.png";
+import AquilaOEM18 from "./../Assets/img/Group-949.png";
+import AquilaOEM19 from "./../Assets/img/Group-976.png";
+import AquilaOEM20 from "./../Assets/img/Group-994.png";
 export default {
     LOGO,
     SolutionEVSFirstMenuImage,
@@ -58,6 +99,7 @@ export default {
     SolutionEVSFeatureEightImage,
     SolutionEVSFeatureNinthImage,
     SolutionEVSFeatureTenthImage,
+    SolutionEVSFeatureNintheImage,
     PostCard,
     SolutionActionSection,
     SolutionSection,
@@ -83,4 +125,42 @@ export default {
     AccessoriesCardImage9,
     AccessoriesCardImage10,
     ComponentNotFound,
+    AquilaTrack1,
+    AquilaTrack2,
+    AquilaTrack3,
+    AquilaTrack4,
+    AquilaTrack5,
+    AquilaTrack6,
+    AquilaTrack7,
+    AquilaTrack8,
+    AquilaSchool1,
+    AquilaSchool2,
+    AquilaSchool3,
+    AquilaSchool4,
+    AquilaSchool5,
+    AquilaSchool6,
+    AquilaSchool7,
+    AquilaSchool8,
+    AquilaSchool9,
+    AquilaSchool10,
+    AquilaOEM1,
+    AquilaOEM2,
+    AquilaOEM3,
+    AquilaOEM4,
+    AquilaOEM5,
+    AquilaOEM6,
+    AquilaOEM7,
+    AquilaOEM8,
+    AquilaOEM9,
+    AquilaOEM10,
+    AquilaOEM11,
+    AquilaOEM12,
+    AquilaOEM13,
+    AquilaOEM14,
+    AquilaOEM15,
+    AquilaOEM16,
+    AquilaOEM17,
+    AquilaOEM18,
+    AquilaOEM19,
+    AquilaOEM20,
 }
